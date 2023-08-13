@@ -45,13 +45,13 @@ if __name__ == '__main__':
         if new_video_id != old_video_id:
             old_video_id = new_video_id
             print(f"{tag_run}NEW VIDEO UPLOADED!")
-            if config_manager.play_sound_on_new_video:
+            if config_manager.play_sound_on_new_video is True:
                 print(f"{spacer_run}playing sound ...")
                 playsound('notification_sound.mp3')
-            if config_manager.open_new_video_url:
+            if config_manager.open_new_video_url is True:
                 print(f"{spacer_run}opening: https://www.youtube.com/watch?v={new_video_id}")
                 webbrowser.open(f"https://www.youtube.com/watch?v={new_video_id}")
-            if config_manager.open_additional_url_on_new_video:
+            if config_manager.open_additional_url_on_new_video is True:
                 print(f"{spacer_run}opening: {config_manager.additional_url}")
                 webbrowser.open(config_manager.additional_url)
             input("Press enter to continue ...")
