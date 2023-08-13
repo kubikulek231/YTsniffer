@@ -39,7 +39,7 @@ class ConfigManager:
                 return False
             if self.additional_url == cd.additional_url.value:
                 return False
-        if self.refresh_delay is None:
+        if self.refresh_delay is None or self.refresh_delay < 1:
             return False
         return True
 
